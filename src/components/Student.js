@@ -36,6 +36,12 @@ function Student(){
         url:'http://localhost/sat-app/db2.php', //db link
         data: getData, // data to be transfered
         config:'Content-Type= "multipart/form-data"'
+      }).then(function(response){
+        const url = 'http://localhost/sat-app/db2.php';
+        axios.get(url).then((response) => {
+          setStudents(response.data);
+          console.log(students);
+        })
       });
     }
 
