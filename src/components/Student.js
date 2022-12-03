@@ -23,8 +23,6 @@ function Student(){
       })
     },[])
 
-
-
     const submitBtn = function(e){
       e.preventDefault();
       let getData = new FormData ();
@@ -86,7 +84,7 @@ function Student(){
     return(
       <>
         <h1>Student's List</h1>
-        <form action="">
+        <form>
           <input type="text" name="fname" value= {fname} onChange = {(e) => setFname(e.target.value)}/>
           <input type="text" name="lname" value= {lname} onChange = {(e) => setLname(e.target.value)}/>
           <input type="number" name="age" value= {age} onChange = {(e) => setAge(e.target.value)}/>
