@@ -31,7 +31,6 @@ function Student(){
       getData.append('lname', lname); 
       getData.append('age', age); 
       getData.append('function', 'insert');
-
       axios({
         method:'POST', //get/post
         url:'http://localhost/sat-app/db2.php', //db link
@@ -88,7 +87,7 @@ function Student(){
     return(
       <>
         <h1>Student's List</h1>
-        <form>
+        <form action="">
           <input type="text" name="fname" value= {fname} onChange = {(e) => setFname(e.target.value)}/>
           <input type="text" name="lname" value= {lname} onChange = {(e) => setLname(e.target.value)}/>
           <input type="number" name="age" value= {age} onChange = {(e) => setAge(e.target.value)}/>
