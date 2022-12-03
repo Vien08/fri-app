@@ -1,5 +1,5 @@
 
-import {useEffect, useState} from 'react';
+import {useState,useEffect} from 'react';
 import axios from 'axios';
 
 function Student(){
@@ -84,12 +84,12 @@ function Student(){
     return(
       <>
         <h1>Student's List</h1>
+
         <form>
           <input type="text" name="fname" value= {fname} onChange = {(e) => setFname(e.target.value)}/>
           <input type="text" name="lname" value= {lname} onChange = {(e) => setLname(e.target.value)}/>
           <input type="number" name="age" value= {age} onChange = {(e) => setAge(e.target.value)}/>
           <input type="submit" name="submit" onClick = {submitBtn} />
-          
         </form>
 
           <table>
