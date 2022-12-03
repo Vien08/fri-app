@@ -13,7 +13,7 @@ function App() {
       <Navbar/>
         <div>
           <Routes>
-            <Route path="/react-app" element={<Home/>} />
+            <Route path="/home" element={<Home/>} />
             <Route path="/features" element={<Features/>}/>
             <Route path="/pricing" element={<Pricing/>}/>
           </Routes>
