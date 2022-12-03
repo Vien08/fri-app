@@ -25,7 +25,8 @@ function Student(){
 
 
 
-    const submitBtn = function(){
+    const submitBtn = function(e){
+      e.preventDefault();
       let getData = new FormData ();
       getData.append('fname', fname); //key-value pairs
       getData.append('lname', lname); 
@@ -36,12 +37,6 @@ function Student(){
         url:'http://localhost/sat-app/db2.php', //db link
         data: getData, // data to be transfered
         config:'Content-Type= "multipart/form-data"'
-      }).then(function(response){
-        const url = 'http://localhost/sat-app/db2.php';
-        axios.get(url).then((response) => {
-          setStudents(response.data);
-          console.log(students);
-        })
       });
     }
 
@@ -87,8 +82,6 @@ function Student(){
       });
     }
   
-
-
 
     return(
       <>
